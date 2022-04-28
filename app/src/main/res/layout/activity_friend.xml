@@ -393,33 +393,25 @@
         android:background="#111113"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:weightSum="5"
         android:stretchColumns="*">
         <TableRow
             android:padding="10dp">
             <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Tab_button_Theme"
                 android:src="@drawable/person"/>
             <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Tab_button_Theme"
                 android:src="@drawable/chatting"/>
             <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Tab_button_Theme"
                 android:src="@drawable/news"/>
             <ImageView
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Tab_button_Theme"
                 android:src="@drawable/shopping"/>
             <ImageView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/Tab_button_Theme"
                 android:src="@drawable/moreview"/>
 
         </TableRow>

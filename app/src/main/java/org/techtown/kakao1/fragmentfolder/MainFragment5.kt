@@ -48,12 +48,8 @@ class MainFragment5 : Fragment()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.settingButton.setOnClickListener{
-
-            val intent = Intent (getActivity(), SettingActivity::class.java)
-            getActivity()?.startActivity(intent)
-
-
-
+            val intent = Intent (activity, SettingActivity::class.java)
+            activity?.startActivity(intent)
         }
     }
 

@@ -5,29 +5,64 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewpager"
+    <FrameLayout
+        android:id="@+id/frameLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/tabLayout"
+        app:layout_constraintBottom_toTopOf="@+id/tab"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
+    </FrameLayout>
+
+    <TableLayout
+        android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#111113"
+        android:stretchColumns="*"
+        android:weightSum="5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:theme="@style/TabTheme"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
 
-        android:background="#151517"
+        <TableRow android:padding="10dp"
+            >
 
+            <ImageButton
+                android:background="@color/tab_background"
+                android:id="@+id/Tab_Button_1"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/person" />
 
+            <ImageButton
+                android:background="@color/tab_background"
+                android:id="@+id/Tab_Button_2"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/chatting" />
 
-        >
-    </com.google.android.material.tabs.TabLayout>
+            <ImageButton
+                android:background="@color/tab_background"
+                android:id="@+id/Tab_Button_3"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/news" />
+
+            <ImageButton
+                android:background="@color/tab_background"
+                android:id="@+id/Tab_Button_4"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/shopping" />
+
+            <ImageButton
+                android:background="@color/tab_background"
+                android:id="@+id/Tab_Button_5"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/moreview" />
+
+        </TableRow>
+
+    </TableLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
