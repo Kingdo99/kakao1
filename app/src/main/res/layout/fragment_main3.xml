@@ -14,4 +14,5 @@
         android:text="뉴스"
         android:textSize="20sp"/>
 
+
 </androidx.constraintlayout.widget.ConstraintLayout>

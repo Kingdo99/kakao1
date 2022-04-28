@@ -22,6 +22,7 @@ class SettingActivity : AppCompatActivity(){
 
 
 
+
         binding.TabButton1.setOnClickListener {
             setFrag(1)
         }
@@ -37,6 +38,8 @@ class SettingActivity : AppCompatActivity(){
         binding.TabButton5.setOnClickListener {
             setFrag(5)
         }
+
+
     }
 
     private  fun setFrag(Num : Int) {
