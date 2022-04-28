@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">kakao1</string>
+    
+    <string name="auto_friend_add">내 연락처에서 카카오톡을 사용하는 친구를 자동으로\n친구목록에 추가합니다. 등록 가능한 친구가 최대 친구 수를\n초과할 경우에는 추가되지 않습니다.</string>
+    <string name="friend_recommend_permit">알 수도 있는 친구를 추천받고, 나를 다른\n친구에게도 추천해줍니다.</string>
+    <string name="friend_name_sync">카카오톡 앱의 친구 이름을 다른 기기나 카카오 게임 등에서도\n동일하게 보여줍니다.</string>
+    <string name="show_birthday_f">친구 목록에서 친구의 생일 정보를 보여줍니다.</string>
+    <string name="show_update_f">친구 목록에서 프로필을 업데이트한 친구를 모아서 보여줍니다.</string>
+
+</resources>

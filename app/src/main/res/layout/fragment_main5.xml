@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/ViewMore_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="더보기"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/codeScan_view"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="21dp"
+                    android:maxHeight="21dp"
+                    android:src="@drawable/find" />
+
+                <ImageView
+                    android:id="@+id/codeScan_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/music_view"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="21dp"
+                    android:maxHeight="21dp"
+                    android:src="@drawable/codescan" />
+
+
+                <ImageView
+                    android:id="@+id/music_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15dp"
+                    android:layout_toLeftOf="@id/setting_Button"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="21dp"
+                    android:maxHeight="21dp"
+                    android:src="@drawable/music" />
+
+
+                <ImageButton
+                    android:id="@+id/setting_Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="0dp"
+                    android:adjustViewBounds="true"
+                    android:maxWidth="21dp"
+                    android:maxHeight="21dp"
+                    android:src="@drawable/setting" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFE500">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="60dp"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="140dp"
+                        android:maxHeight="50dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView5"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/qrimage" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="60dp"
+                        android:text="지갑 >"
+                        android:textColor="@color/black"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="송금"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/imageView2" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="결제"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                        app:layout_constraintStart_toEndOf="@+id/textView2" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="자산"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                        app:layout_constraintStart_toEndOf="@+id/textView3" />
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="45dp"
+                        android:maxHeight="45dp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:srcCompat="@drawable/kakaologo" />
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="141dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="16dp"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="80dp"
+                        android:maxHeight="50dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHeight_max="100dp"
+                        app:layout_constraintStart_toEndOf="@+id/textView4"
+                        app:layout_constraintTop_toTopOf="@+id/textView4"
+                        app:layout_constraintWidth_max="100dp"
+                        app:srcCompat="@drawable/purchasehis" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:text="0원"
+                        android:textSize="15dp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView3"
+                        app:layout_constraintEnd_toEndOf="@+id/imageView3" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/businesscard"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="30dp"
+                        android:maxHeight="30dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bcimage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="95dp"
+                        android:layout_marginBottom="1dp"
+                        android:text="톡명함, QR코드로 전달해 보세요."
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="25dp"
+                        android:maxHeight="25dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/rightshift" />
+
+                </LinearLayout>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/black"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="4"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid0" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid1" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid2" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid3" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid4" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid5" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid6" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid7" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid8" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid9" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid10" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid11" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid12" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid13" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid14" />
+
+                    <ImageButton
+                        style="@style/ImageButton_STYLE"
+                        android:src="@drawable/grid15" />
+
+                </GridLayout>
+
+                <ImageView
+                    android:id="@+id/adview_re"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/ad0" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/adview2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/adview3" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

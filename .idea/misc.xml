@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/chatting_icon.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/chatting_icon2.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic__402435_account_profile_user_avatar_man_icon.xml" value="0.18425925925925926" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic__470666_app_ui_user_web_online_icon.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic__519695_avatar_person_user_icon.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic__78155_bubble_chat_comment_communication_message_icon.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic_baseline_account_circle_24.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3963541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/person2_icon.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/person3_icon.xml" value="0.25" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/person_icon.xml" value="0.3463541666666667" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/switch_thumb.xml" value="0.23703703703703705" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/switch_track_off.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/switch_track_on.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/drawable/switch_track_selector.xml" value="0.13333333333333333" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/activity_friend.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/activity_setting.xml" value="0.5" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main1.xml" value="0.3302083333333333" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main2.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main3.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main4.xml" value="0.12222222222222222" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main5.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main6.xml" value="0.22291666666666668" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.33697916666666666" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.16822916666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
