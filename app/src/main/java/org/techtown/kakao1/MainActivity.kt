@@ -15,7 +15,7 @@ import org.techtown.kakao1.fragmentfolder.*
 class MainActivity : AppCompatActivity() {
 
 
-
+//hi
 
     private  var mBinding : ActivityMainBinding? = null
     private  val binding get() = mBinding!!
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         Log.d("cycle","onCreate")
 
-        val list = listOf(MainFragment1(),MainFragment2(), MainFragment3(), MainFragment4()
+        val list = listOf(MainFragment1(),MainFragment2(), MainFragment3(), MainFragment4(), MainFragment5()
         )
         val pagerAdapter = FragmentPagerAdapter(list, this)
         binding.viewpager.adapter = pagerAdapter
