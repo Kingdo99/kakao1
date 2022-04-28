@@ -19,6 +19,8 @@ class SettingMainActivity : AppCompatActivity() {
         Log.d("cycle","onCreate")
         setFrag(0)
 
+        flag = true
+
         binding.TabButton01.setOnClickListener {
             setFrag(1)
         }

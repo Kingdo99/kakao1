@@ -24,7 +24,7 @@ class SettingActivity : Fragment(){
     ): View? {
         mBinding = ActivitySettingBinding.inflate(inflater, container, false)
         binding.friendIntentLayout.setOnClickListener {
-            val intent = Intent(activity, FriendActivity::class.java)
+            val intent = Intent(activity, FriendMainActivity::class.java)
             activity?.startActivity(intent)
         }
         return binding.root

@@ -9,14 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kakao1">
         <activity
-            android:name=".FriendActivity"
+            android:taskAffinity="com.als2019.multiFinish"
+            android:name=".FriendMainActivity"
             android:exported="true">
-
         </activity>
         <activity
+            android:taskAffinity="com.als2019.multiFinish"
             android:name=".SettingMainActivity"
             android:exported="true">
-
         </activity>
         <activity
             android:name=".MainActivity"
