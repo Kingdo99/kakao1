@@ -1,4 +1,4 @@
-package org.techtown.kakao1.fragmentfolder
+package org.techtown.kakao1
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

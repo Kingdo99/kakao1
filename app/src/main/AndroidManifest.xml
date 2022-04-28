@@ -9,13 +9,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kakao1">
         <activity
-            android:name=".fragmentfolder.FriendActivity"
+            android:name=".FriendActivity"
             android:exported="true">
 
         </activity>
         <activity
-            android:name=".fragmentfolder.SettingActivity"
+            android:name=".SettingMainActivity"
             android:exported="true">
+
         </activity>
         <activity
             android:name=".MainActivity"
@@ -25,8 +26,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
 
     </application>
 

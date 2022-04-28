@@ -2,22 +2,12 @@ package org.techtown.kakao1
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayoutMediator
 import org.techtown.kakao1.databinding.ActivityMainBinding
-import org.techtown.kakao1.fragmentfolder.*
+
 
 
 class MainActivity : AppCompatActivity() {
-
-
-
-
     private  var mBinding : ActivityMainBinding? = null
     private  val binding get() = mBinding!!
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -103,15 +93,3 @@ class MainActivity : AppCompatActivity() {
 }
 
 
-
-
-class FragmentPagerAdapter(val fragmentList:List<Fragment>,fragmentActivity: FragmentActivity)
-    : FragmentStateAdapter(fragmentActivity){
-    override fun getItemCount() = fragmentList.size
-
-    override fun createFragment(position: Int) = fragmentList.get(position)
-
-
-
-
-}

@@ -1,4 +1,4 @@
-package org.techtown.kakao1.fragmentfolder
+package org.techtown.kakao1
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +10,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import org.techtown.kakao1.R
 import org.techtown.kakao1.databinding.FragmentMain5Binding
 import kotlin.concurrent.thread
 
@@ -40,19 +39,15 @@ class MainFragment5 : Fragment()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View?
-    {
+    ): View? {
         mBinding = FragmentMain5Binding.inflate(inflater, container, false)
+        binding.settingButton.setOnClickListener {
+            val intent = Intent(activity, SettingMainActivity::class.java)
+            activity?.startActivity(intent)
+        }
         return binding.root
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        binding.settingButton.setOnClickListener{
-            val intent = Intent (activity, SettingActivity::class.java)
-            activity?.startActivity(intent)
-        }
-    }
 
     override fun onStart() {
         super.onStart()
@@ -73,7 +68,7 @@ class MainFragment5 : Fragment()
                     else
                         i++
                     if(started) { // started 값이 true일 경우
-                        handler?.sendEmptyMessage(0) // Handler에 메세지 전달
+                        handler.sendEmptyMessage(0) // Handler에 메세지 전달
 
                     }
                 }
