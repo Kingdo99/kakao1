@@ -73,6 +73,7 @@ class MainFragment5 : Fragment()
                         i++
                     if(started) { // started 값이 true일 경우
                         handler?.sendEmptyMessage(0) // Handler에 메세지 전달
+
                     }
                 }
             }

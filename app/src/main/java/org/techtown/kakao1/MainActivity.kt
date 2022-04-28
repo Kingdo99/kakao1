@@ -16,7 +16,7 @@ import org.techtown.kakao1.fragmentfolder.*
 class MainActivity : AppCompatActivity() {
 
 
-//4
+
 
     private  var mBinding : ActivityMainBinding? = null
     private  val binding get() = mBinding!!

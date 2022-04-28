@@ -57,7 +57,11 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
+<FrameLayout
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
     <ScrollView
         android:layout_weight="1"
         android:padding="10dp"
@@ -241,14 +245,14 @@
                     android:layout_height="wrap_content"
                     android:text="테마"
                     style="@style/TEXT_STYLE" />
+
                 <TextView
-                    android:gravity="right"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="right"
                     android:text="시스템 설정 모드"
                     android:textColor="#595959"
-                    android:textSize="14dp"
-                    />
+                    android:textSize="14dp" />
             </LinearLayout>
             <LinearLayout
                 style="@style/LINEAR_STYLE"
@@ -318,9 +322,8 @@
             </LinearLayout>
 
         </LinearLayout>
-
     </ScrollView>
-
+</FrameLayout>
     <TableLayout
 
         android:background="#111113"
@@ -329,26 +332,40 @@
         android:weightSum="4"
         android:stretchColumns="*">
         <TableRow android:padding="10dp">
-            <ImageView
 
+            <ImageButton
+                android:background="#111113"
+                android:id="@+id/Tab_Button_1"
                 style="@style/Tab_button_Theme"
-                android:src="@drawable/person"/>
-            <ImageView
+                android:src="@drawable/person" />
 
-                style="@style/Tab_button_Theme"
-                android:src="@drawable/chatting"/>
-            <ImageView
+            <ImageButton
 
+                android:background="#111113"
+                android:id="@+id/Tab_Button_2"
                 style="@style/Tab_button_Theme"
-                android:src="@drawable/news"/>
-            <ImageView
+                android:src="@drawable/chatting" />
 
-                style="@style/Tab_button_Theme"
-                android:src="@drawable/shopping"/>
-            <ImageView
+            <ImageButton
 
+                android:background="#111113"
+                android:id="@+id/Tab_Button_3"
                 style="@style/Tab_button_Theme"
-                android:src="@drawable/moreview"/>
+                android:src="@drawable/news" />
+
+            <ImageButton
+
+                android:background="#111113"
+                android:id="@+id/Tab_Button_4"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/shopping" />
+
+            <ImageButton
+
+                android:background="#111113"
+                android:id="@+id/Tab_Button_5"
+                style="@style/Tab_button_Theme"
+                android:src="@drawable/moreview" />
 
         </TableRow>
 
