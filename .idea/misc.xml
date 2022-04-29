@@ -34,6 +34,7 @@
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_friend.xml" value="0.30364583333333334" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_friendmain.xml" value="0.1921875" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_plus_friend.xml" value="0.3313253012048193" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_setting.xml" value="0.18" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/activity_settingmain.xml" value="0.1" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/db_friend.xml" value="0.28541666666666665" />
@@ -43,6 +44,7 @@
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/fragment_main4.xml" value="0.30364583333333334" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/fragment_main5.xml" value="0.1" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/plus_friend.xml" value="0.36302083333333335" />
       </map>
     </option>
   </component>

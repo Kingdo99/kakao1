@@ -33,7 +33,7 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
     class CustomViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView){
         //View 타입의 itmeView를 매개변수로 받아서 customViewHolder를 실행시키면
         //RecyclerView에 있는 ViewHolder 생성자에 ItemView를 매개변수로 주고 생성
-        val profile  =  itemView.findViewById<ImageView>(R.id.iv_profile)
+        val profile: ImageView =  itemView.findViewById<ImageView>(R.id.iv_profile)
         val name  =  itemView.findViewById<TextView>(R.id.tv_name)
         //holder의 매개변수로 줄 즉 미리 만들어 놓은 구격의 뷰 아이디 값을 바인딩
 

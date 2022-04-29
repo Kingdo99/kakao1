@@ -4,10 +4,12 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import java.lang.Exception
+import java.util.*
 
 // sqliteopenhelper를 상속받는 클래스임
-class DatabaseHelper private constructor(context: Context) :
+class DatabaseHelper private constructor(context: Context?) :
 SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
     // construct에 직접 접근하지못하게, 즉 생성자를 호출하지 못하게 private로 선언
     // -> getInstance에서 doublecheckedlocking을 통해서 instance를 반환하는 싱글톤 구조를 남김
@@ -92,6 +94,11 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
         //id 값으로 특정 데이터를 db에서 삭제
     }
 
+    fun deleteAll(){
+        val db = this.writableDatabase
+        db.execSQL("delete from $TABLE_NAME")
+    }
+
     fun getAllDate() : String{
         var result = "No data in DB"
 
@@ -120,6 +127,43 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                     //cursor를 다 사용하면 결과적으로 cursor 객체의 리소스를 반환
                 }
             }
+        return result
+    }
+
+    fun getarrayList() : ArrayList<Profiles>{
+        val result = arrayListOf<Profiles>()
+        val db = this.readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM $TABLE_NAME", null)
+        var a : Int
+        var b : String
+        var bus : Profiles
+        try {
+            if (cursor.count != 0){
+                //해당 커서에 정보가 있다면
+                val stringBuffer = StringBuffer()
+                while (cursor.moveToNext()){
+                    // moveToNext()로 해당 커서에 담긴 정보를 순회하며 모두 탐색
+                    a = cursor.getInt(1)//iamge
+                    b = cursor.getString(2)//profileimage
+                    Log.d("db1",a.toString())
+                    bus = if(a==0){
+                        // 이미지를 설정 안했다면 기본이미지 나오게
+                       Profiles(R.drawable.profile_default,b)
+                    }else{
+                       Profiles(a,b)
+                    }
+                    result.add(bus)
+                }
+
+            }
+        }catch (e:Exception){
+            e.printStackTrace()
+        }finally {
+            if (cursor != null && !cursor.isClosed){
+                cursor.close()
+                //cursor를 다 사용하면 결과적으로 cursor 객체의 리소스를 반환
+            }
+        }
         return result
     }
 }
