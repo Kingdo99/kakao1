@@ -5,6 +5,63 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ViewMore_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="친구"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/find_Button"
+            style="@style/Bar_button_Theme"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/plus_friend_Button"
+            android:background="@color/black"
+            android:src="@drawable/find" />
+
+        <ImageButton
+            android:id="@+id/plus_friend_Button"
+            style="@style/Bar_button_Theme"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/music_Button"
+            android:background="@color/black"
+            android:src="@drawable/plus_friend" />
+
+
+        <ImageButton
+            android:id="@+id/music_Button"
+            style="@style/Bar_button_Theme"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/setting_Button"
+            android:background="@color/black"
+            android:src="@drawable/music" />
+
+
+        <ImageButton
+            android:id="@+id/setting_Button"
+            style="@style/Bar_button_Theme"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="0dp"
+            android:background="@color/black"
+            android:src="@drawable/setting" />
+
+    </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_profiles"
         android:layout_width="0dp"
@@ -12,6 +69,8 @@
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,12 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import org.techtown.kakao1.R
 import org.techtown.kakao1.databinding.FragmentMain1Binding
-import org.techtown.kakao1.databinding.FragmentMain5Binding
 
 class MainFragment1 : Fragment()
 {
+    //databasehelper를 전역변수로 선언
+
+    private val databaseHelper: DatabaseHelper by lazy {
+        DatabaseHelper.getInstance(activity?.applicationContext)
+        //applicationcontext가 안먹어서 activity.applicationcontext
+    }
+
+
     private var mBinding: FragmentMain1Binding? = null
     private val binding get() = mBinding!!
     override fun onCreateView(
