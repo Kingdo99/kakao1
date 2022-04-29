@@ -148,7 +148,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                     Log.d("db1",a.toString())
                     bus = if(a==0){
                         // 이미지를 설정 안했다면 기본이미지 나오게
-                       Profiles(R.drawable.profile_default,b)
+                       Profiles(R.drawable.profile_image,b)
                     }else{
                        Profiles(a,b)
                     }
