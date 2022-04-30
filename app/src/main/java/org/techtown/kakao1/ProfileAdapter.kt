@@ -37,7 +37,5 @@ class ProfileAdapter(val profileList : ArrayList<Profiles>) : RecyclerView.Adapt
         val name  =  itemView.findViewById<TextView>(R.id.tv_name)
         //holder의 매개변수로 줄 즉 미리 만들어 놓은 구격의 뷰 아이디 값을 바인딩
 
-
-
     }
 }

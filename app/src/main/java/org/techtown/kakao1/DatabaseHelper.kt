@@ -77,7 +77,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
         //데이터를 추가할 테이블 이름과 데이터 묶음인 contentValues를 매개변수
     }
 
-    fun updateData(id: String, image_route: String, name : String){
+    fun updateData(id: String, image_route: Int, name : String){
         val db = this.writableDatabase
         val contentValues = ContentValues().apply {
             put(COL1_ID,id)
@@ -146,11 +146,10 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                     // moveToNext()로 해당 커서에 담긴 정보를 순회하며 모두 탐색
                     a = cursor.getInt(1)//iamge
                     b = cursor.getString(2)//profileimage
-                    Log.d("db11",R.drawable.profile_image.toString())
                     Log.d("db15","${a}")
                      if(a==0){
                         // 이미지를 설정 안했다면 기본이미지 나오게
-                      bus =Profiles(R.drawable.profile_image,b)
+                      bus =Profiles(R.drawable.profile_default,b)
                          Log.d("db1","3")
                     }else{
                         //여기서 String 타입으로 R.drawable.~ 이런식으로 주면 안먹음

@@ -23,15 +23,10 @@ class PlusFriendActivity : AppCompatActivity() {
         insertDb()
         updateDb()
         deleteDb()
-        getAlldb()
+
     }
 
 
-
-    //데이터 베이스 조작이 이루어 졌을 때 textview의 처리를 위한 함수
-//    private fun showTxt(text: String){
-//        binding.tvResult.append(text + "\n")
-//    }
 
 
     //crud조작이 이루어 졌을 때 edittext의 내용이 삭제 되도록 함수
@@ -66,9 +61,10 @@ class PlusFriendActivity : AppCompatActivity() {
     private fun updateDb(){
         binding.btnUpdate.setOnClickListener {
             try {
+                val str = binding.etProfile.text.toString().trim()
                 databaseHelper.updateData(
                     binding.etID.text.toString().trim(),
-                    binding.etProfile.text.toString().trim(),
+                    resources.getIdentifier(str,"drawable",packageName),
                     binding.etName.text.toString().trim()
                 )
                 clearEditTexts()
@@ -88,18 +84,5 @@ class PlusFriendActivity : AppCompatActivity() {
             }
         }
     }
-
-    private fun getAlldb(){
-        try {
-            val selectResult = databaseHelper.getAllDate()
-        }catch (e :Exception){
-            e.printStackTrace()
-        }
-    }
-
-
-
-
-
 
 }

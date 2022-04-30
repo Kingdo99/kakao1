@@ -7,6 +7,7 @@
     android:background="#000000">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -14,17 +15,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_profile"
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_cardview"
+            android:layout_margin="10dp"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/profile_image" />
+            app:cardCornerRadius="18dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/profile_default" />
+
+        </androidx.cardview.widget.CardView>
+
 
         <TextView
             android:id="@+id/tv_name"
@@ -33,9 +44,10 @@
             android:layout_marginStart="16dp"
             android:text="김도우"
             android:textColor="#FFFFFF"
+            android:textSize="17dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_profile"
-            app:layout_constraintStart_toEndOf="@+id/iv_profile"
-            app:layout_constraintTop_toTopOf="@+id/iv_profile" />
+            app:layout_constraintBottom_toBottomOf="@+id/iv_cardview"
+            app:layout_constraintStart_toEndOf="@+id/iv_cardview"
+            app:layout_constraintTop_toTopOf="@+id/iv_cardview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
