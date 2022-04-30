@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 import java.lang.Exception
+import java.lang.reflect.Field
 import java.util.*
 
 // sqliteopenhelper를 상속받는 클래스임
@@ -63,7 +64,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
     }
 
     //crud 구현
-    fun insertData(image_route : String,name : String){
+    fun insertData(image_route : Int,name : String){
         val db = this.writableDatabase
         //writableDatabase로 db오픈
         val contentValues = ContentValues().apply {
@@ -145,12 +146,20 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                     // moveToNext()로 해당 커서에 담긴 정보를 순회하며 모두 탐색
                     a = cursor.getInt(1)//iamge
                     b = cursor.getString(2)//profileimage
-                    Log.d("db1",a.toString())
-                    bus = if(a==0){
+                    Log.d("db11",R.drawable.profile_image.toString())
+                    Log.d("db15","${a}")
+                     if(a==0){
                         // 이미지를 설정 안했다면 기본이미지 나오게
-                       Profiles(R.drawable.profile_image,b)
+                      bus =Profiles(R.drawable.profile_image,b)
+                         Log.d("db1","3")
                     }else{
-                       Profiles(a,b)
+                        //여기서 String 타입으로 R.drawable.~ 이런식으로 주면 안먹음
+                        //R.~~ 무슨 개념이 먹어서 안되는 듯 그래서 애초에 리소스id로 주기로 결정
+                        // 이미지의 리소스id를 가져오는 getresources()는 액티비티에서만 됨 그래서
+                        // insert를 호출하는 activity에서 값을 줄 때 부터 resid로 변환 시켜서 주기로 결정, PlusFrinedActivity에서 진행
+
+                      bus = Profiles(a,b)
+                         Log.d("db12","4")
                     }
                     result.add(bus)
                 }

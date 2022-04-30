@@ -1,5 +1,6 @@
 package org.techtown.kakao1
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -43,12 +44,16 @@ class PlusFriendActivity : AppCompatActivity() {
     }
 
     private fun insertDb(){
-        var str = "R.drawable."
-        str.plus(binding.etProfile.text.toString().trim())
+
         binding.btnInsert.setOnClickListener {
             try {
+                //해당 이미지의 리소스id를 가져오는 getresources()->resources는 activity에서만 가능
+                // 변수 str 에 사용자가 입력한 프로필 이미지 이름을 trim해서 text형식으로가짐
+                // Resources 인스턴스에 getIdentifier() 실행 해당 1. 이미지 이름, 2. 이미지 type, 3. 패키지네임
+                val str = binding.etProfile.text.toString().trim()
                 databaseHelper.insertData(
-                    str,
+
+                    resources.getIdentifier(str,"drawable",packageName),
                     binding.etName.text.toString().trim()
                 )
                 clearEditTexts()
