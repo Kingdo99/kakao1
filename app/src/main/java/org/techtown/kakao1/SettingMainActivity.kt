@@ -3,6 +3,7 @@ package org.techtown.kakao1
 import android.os.Bundle
 import android.util.Log
 import android.widget.FrameLayout
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 
@@ -11,33 +12,47 @@ import org.techtown.kakao1.databinding.ActivitySettingmainBinding
 class SettingMainActivity : AppCompatActivity() {
     private  var mBinding : ActivitySettingmainBinding? = null
     private  val binding get() = mBinding!!
+
+    lateinit var tablist : List<ImageButton>
+    var last : Int = 0
     private var flag = true
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mBinding = ActivitySettingmainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         Log.d("cycle","onCreate")
+        with(binding){
+            tablist = listOf(TabButton0,TabButton1,TabButton2,TabButton3,TabButton4)
+        }
+
         setFrag(0)
+        FragImageChange(4)
 
         flag = true
 
-        binding.TabButton01.setOnClickListener {
+        binding.TabButton0.setOnClickListener {
             setFrag(1)
+            FragImageChange(0)
         }
-        binding.TabButton02.setOnClickListener {
+        binding.TabButton1.setOnClickListener {
             setFrag(2)
+            FragImageChange(1)
         }
-        binding.TabButton03.setOnClickListener {
+        binding.TabButton2.setOnClickListener {
             setFrag(3)
+            FragImageChange(2)
         }
-        binding.TabButton04.setOnClickListener {
+        binding.TabButton3.setOnClickListener {
             setFrag(4)
+            FragImageChange(3)
         }
-        binding.TabButton05.setOnClickListener {
+        binding.TabButton4.setOnClickListener {
             if (flag){
                 finish()
             }else{
                 setFrag(5)
+                FragImageChange(4)
                 flag = true
             }
         }
@@ -67,6 +82,14 @@ class SettingMainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun FragImageChange(current : Int){
+        with(binding){
+            tablist.get(last).setImageResource(resources.getIdentifier("unpush_"+(last),"drawable",packageName))
+            tablist.get(current).setImageResource(resources.getIdentifier("push_"+(current),"drawable",packageName))
+        }
+        last = current
     }
 
     override fun onStart() {
