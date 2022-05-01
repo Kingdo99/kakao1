@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
         FragImageChange(0)
 
 
-
-
         with(binding) {
             TabButton0.setOnClickListener {
                 setFrag(1)

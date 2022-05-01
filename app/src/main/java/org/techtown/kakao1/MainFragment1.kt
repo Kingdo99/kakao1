@@ -38,8 +38,6 @@ class MainFragment1 : Fragment()
         binding.rvProfiles.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding.rvProfiles.setHasFixedSize(true) // 리사클러 뷰에 대한 성능 개선 방안
 
-
-        // R.drawable.profile_image
         // adapter를 이제 리사이클러 뷰에 연결
 
         binding.plusFriendButton.setOnClickListener {
@@ -52,14 +50,14 @@ class MainFragment1 : Fragment()
     }
 
     override fun onStart() {
+
         //start 되었을 때 db에 저장되어있는 arraylist를 가져와서
         //adapater에 매개변수로 줘서 리사이클러 뷰에 연결
+
         Log.d("db","start, getarrayList")
         profileList = databaseHelper.getarrayList()
         binding.rvProfiles.adapter = ProfileAdapter(profileList)
         super.onStart()
+
     }
-
-
-
 }

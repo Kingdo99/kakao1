@@ -47,6 +47,7 @@ class FriendMainActivity : AppCompatActivity() {
         binding.TabButton4.setOnClickListener {
             if (flag){
                 this@FriendMainActivity.finishAffinity()
+                //동시종료
             }else{
                 setFrag(5)
                 FragImageChange(4)
@@ -75,7 +76,6 @@ class FriendMainActivity : AppCompatActivity() {
             }
             5->ft.replace(R.id.frameLayout3,FriendActivity()).commit()
         }
-
     }
 
     private fun FragImageChange(current : Int){

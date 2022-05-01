@@ -12,7 +12,6 @@ import org.techtown.kakao1.databinding.ActivitySettingmainBinding
 class SettingMainActivity : AppCompatActivity() {
     private  var mBinding : ActivitySettingmainBinding? = null
     private  val binding get() = mBinding!!
-
     lateinit var tablist : List<ImageButton>
     var last : Int = 0
     private var flag = true
@@ -85,6 +84,8 @@ class SettingMainActivity : AppCompatActivity() {
     }
 
     private fun FragImageChange(current : Int){
+        //이전 tab unpush_image로 바꾸고
+        //현재 tab push_image로 변경
         with(binding){
             tablist.get(last).setImageResource(resources.getIdentifier("unpush_"+(last),"drawable",packageName))
             tablist.get(current).setImageResource(resources.getIdentifier("push_"+(current),"drawable",packageName))
