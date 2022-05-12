@@ -25,6 +25,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
         const val COL1_ID = "_id"
         const val COL2_PI = "profile_image"
         const val COL3_NAME = "name"
+        const val COL4_CHECKED = "checked"
 
        //SQLITEOPENHELPER의 객체가 여러개 생기게 되면 여러 개 인스턴스가
        //같은 디비에 동시에 접근하면 문제가 발생 할 수 있음 -> 그래서 DATABASE를 SINGLETON으로 생성
@@ -48,6 +49,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                 "$COL1_ID INTEGER PRIMARY KEY AUTOINCREMENT, "+
                 "$COL2_PI TEXT, " +
                 "$COL3_NAME TEXT" +
+                "$COL4_CHECKED BOOLEAN DEFAULT FALSE" +
                 ")"
         p0?.execSQL(createQuery)
         // 쿼리문 해당 디비에 실행 p0은 db
@@ -83,6 +85,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
             put(COL1_ID,id)
             put(COL2_PI,image_route)
             put(COL3_NAME,name)
+
         }
         db.update(TABLE_NAME,contentValues,"$COL1_ID = ?", arrayOf(id))
         //id로 선택한 데이터를 갱신해줌 id값이 primary,기본키 이므로 기본키로 비교
@@ -149,7 +152,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                     Log.d("db15","${a}")
                      if(a==0){
                         // 이미지를 설정 안했다면 기본이미지 나오게
-                      bus =Profiles(R.drawable.profile_default,b)
+                      bus =Profiles(R.drawable.profile_default,b,false)
                          Log.d("db1","3")
                     }else{
                         //여기서 String 타입으로 R.drawable.~ 이런식으로 주면 안먹음
@@ -157,7 +160,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
                         // 이미지의 리소스id를 가져오는 getresources()는 액티비티에서만 됨 그래서
                         // insert를 호출하는 activity에서 값을 줄 때 부터 resid로 변환 시켜서 주기로 결정, PlusFrinedActivity에서 진행
 
-                      bus = Profiles(a,b)
+                      bus = Profiles(a,b,false)
                          Log.d("db12","4")
                     }
                     result.add(bus)
@@ -174,4 +177,6 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION){
         }
         return result
     }
+
+
 }
