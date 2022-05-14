@@ -31,6 +31,10 @@
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/layout/fragment_main6.xml" value="0.22291666666666668" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.33697916666666666" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao1/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.16822916666666668" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/coivd_layout_shape.xml" value="0.18611111111111112" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/coivd_shape1.xml" value="0.39479166666666665" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/coivd_shape2.xml" value="0.39479166666666665" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/covid_textview_shape.xml" value="0.1037037037037037" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/person2_icon.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/person_icon.xml" value="0.14537037037037037" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/drawable/profilestyle.xml" value="0.1" />
@@ -51,6 +55,7 @@
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/list_item.xml" value="0.25" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/plus_friend.xml" value="0.36302083333333335" />
         <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/layout/viewpager_3.xml" value="0.33" />
+        <entry key="..\:/Users/asasa/AndroidStudioProjects/kakao3/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.39479166666666665" />
       </map>
     </option>
   </component>
